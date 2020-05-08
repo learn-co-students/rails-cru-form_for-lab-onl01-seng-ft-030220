@@ -4,11 +4,13 @@
   <%= f.label(:name, 'Name: ') %>
   <%= f.text_field :name %><br />
 
-  <%= f.label(:artist_id, 'Artist ID: ') %>
-  <%= f.text_field :artist_id %><br />
+  <%= f.label(:artist_id, 'Artist: ') %>
+  <!-- <%= f.text_field :artist_id %><br /> -->
+  <%= f.collection_select(:artist_id, @artists, :id, :name) %><br />
 
-  <%= f.label(:genre_id, 'Genre ID: ') %>
-  <%= f.text_field :genre_id %><br />
+  <%= f.label(:genre_id, 'Genre: ') %>
+  <!-- <%= f.text_field :genre_id %><br /> -->
+  <%= f.collection_select(:genre_id, @genres, :id, :name) %><br />
 
   <%= f.submit %>
 <% end %>
